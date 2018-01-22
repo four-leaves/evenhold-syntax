@@ -2,7 +2,9 @@
 
 A short description of your theme.
 
-![A screenshot of your theme](https://f.cloud.github.com/assets/69169/2289498/4c3cb0ec-a009-11e3-8dbd-077ee11741e5.gif)
+![screenshots01](https://github.com/evenhold/evenhold-syntax/blob/master/screenshots/Screenshot%20from%202018-01-22%2018-31-47.png)
+
+![screenshots01](https://github.com/evenhold/evenhold-syntax/blob/master/screenshots/Screenshot%20from%202018-01-22%2018-33-31.png)
 
 ```bash
   # clone into
