@@ -8,5 +8,5 @@ A short description of your theme.
 
 ```bash
   # clone into
-  ~/.atom/package
+  ~/.atom/packages
 ```
