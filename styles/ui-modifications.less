@@ -1,0 +1,211 @@
+@import "syntax-variables";
+
+// Only apply these styles if user adds class hook to body element.
+// This can be done in user's init script.
+// ie) document.body.classList.add('an-old-hope-modify-ui')
+.an-evenhold-ui {
+  .tree-view {
+    font-size: 12px;
+    background: @black-evn;// bg del panel izquierdo
+
+    .project-root.project-root {
+      &:first-child {
+        padding-top: 10px;
+      }
+      &:before {
+        height: 20px;
+        background-clip: padding-box;
+        color:white;
+      }
+      & > .header .name {
+        line-height: 20px;
+        color:@blue-evn;// color de la carpeta proyecto en el panel izquierdo.
+        text-shadow: 0px 0px 2px @blue-evn,0px 0px 2px @blue-evn,0px 0px 2px @blue-evn,0px 0px 2px @blue-evn;
+      }
+    }
+
+    .selected:before {
+      // background: @green-evn;// file selected en el panel izquierdo
+      border-left: 6px solid @dark-blue-evn;
+    }
+  }
+  .selected.name{
+    color:purple;
+  }
+
+  .selected:after {
+   color:red ;
+  }
+
+
+  .theme-one-dark-ui .tree-view .project-root.project-root::before {
+    border-top: 10px solid transparent;
+  }
+
+  .tree-view-resizer {
+    .tree-view-resize-handle {
+      width: 8px;
+
+    }
+  }
+    .tree-view {
+        &::before {
+            background: @black-evn;
+        }
+
+        .header.list-item,
+        .list-item {
+            color: @light-grey-evn; // color de texto de la caja izquierda
+        }
+    }
+
+    .tab-bar {
+        .tab {
+            &::before {
+                background:@blue-evn;// color de la linea izquierda en el tab
+            }
+
+            .title {
+                color: @white-evn; //title en el tab
+            }
+
+            &.active .title {
+                color: @blue-evn; //title active en el tab
+                border-top:2px solid @blue-evn;
+                border-bottom:2px solid @blue-evn;
+                text-shadow: 0px 0px 2px @blue-evn,0px 0px 2px @blue-evn,0px 0px 2px @blue-evn,0px 0px 2px @blue-evn;
+
+            }
+
+            .close-icon {
+                color: red !important; //icono de cerrar tab
+            }
+        }
+    }
+
+    atom-text-editor::shadow {
+        .line-number {
+            padding-left: 18px !important;
+        }
+    }
+
+    .status-added,
+    .status-added > .list-item {
+        color: @blue-evn !important;
+    }
+
+    .status-modified,
+    .status-modified > .list-item {
+        color:@yellow-evn !important;
+    }
+
+    .status-removed {
+        color: @red-evn !important;
+    }
+
+    .status-renamed {
+        color: @orange-evn !important;
+    }
+
+    .status-ignored,
+    .status-ignored > .list-item {
+        color: @grey-evn !important;
+    }
+
+    .status-bar {
+        color: grey;
+
+        a,
+        div {
+            color: grey;
+        }
+
+        .deprecation-cop-status {
+            color: grey;
+        }
+
+        .package-updates-status-view {
+            color: red;
+        }
+    }
+
+    .settings-view {
+        input[type="checkbox"]:checked {
+            background-color: purple;
+        }
+
+        button.selected,
+        .btn.btn-default.selected,
+        .btn.btn-info {
+            background: purple;
+
+            &:hover {
+                background: @green-evn;
+            }
+        }
+    }
+
+    .btn.btn-primary {
+        background:purple;
+    }
+
+    a.link {
+        color: orange;
+
+        &:hover {
+            color: orange;
+        }
+    }
+    .scrollbars-visible-always {
+  		atom-text-editor {
+  			/deep/ ::-webkit-scrollbar-track {
+  				background: @black-evn;
+  			}
+  			/deep/ ::-webkit-scrollbar-corner {
+  				background: @blue-evn;
+  			}
+  			/deep/ ::-webkit-scrollbar-thumb {
+  				border-color: @black-evn;
+  				background: @blue-evn;
+  			}
+  		}
+      atom-text-editor[mini].is-focused {
+          border-color: @blue-evn;// color de caja de  buscador(ctrl + f)
+          box-shadow: 0px 0px 5px @blue-evn;
+
+      }
+    }
+
+    .tooltip {
+        @tooltips: orange;
+
+        &.top .tooltip-arrow {
+          border-top-color: grey;
+        }
+        &.top-left .tooltip-arrow {
+          border-top-color: grey;
+        }
+        &.top-right .tooltip-arrow {
+          border-top-color: grey;
+        }
+        &.right .tooltip-arrow {
+          border-right-color: grey;
+        }
+        &.left .tooltip-arrow {
+          border-left-color: grey;
+        }
+        &.bottom .tooltip-arrow {
+          border-bottom-color: grey;
+        }
+        &.bottom-left .tooltip-arrow {
+          border-bottom-color: grey;
+        }
+        &.bottom-right .tooltip-arrow {
+          border-bottom-color: grey;
+        }
+        .tooltip-inner {
+            background: @black-evn;// bg cuadro de mensaje
+            border:2px solid @blue-evn;
+        }
+    }
+}
