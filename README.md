@@ -11,8 +11,10 @@ A short description of your theme.
   ~/.atom/packages
 ```
 ## UI Integration
+
+Open file init.coffee (edit >> init script...)
+
 ```coffee
-  # Open file init.coffee (edit >> init script...)
 
 
   # Your init script
