@@ -12,7 +12,12 @@ A short description of your theme.
 ```
 ## UI Integration
 
-Open file init.coffee (edit >> init script...)
+Open file init.coffee (edit >> init script...) and paste:
+```coffee
+  # ...
+  document.body.classList.add('an-evenhold-ui'));
+```
+## Example init.coffee 
 
 ```coffee
 
