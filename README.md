@@ -11,7 +11,7 @@ A short description of your theme.
   ~/.atom/packages
 ```
 ## UI Integration
-```js
+```coffee
   # Open file init.coffee (edit >> init script...)
 
 
@@ -27,6 +27,6 @@ A short description of your theme.
   #   editor.onDidSave ->
   #     console.log "Saved! #{editor.getPath()}"
 
-  
+
   document.body.classList.add('an-evenhold-ui'));
 ```
