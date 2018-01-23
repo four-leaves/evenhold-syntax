@@ -6,6 +6,7 @@ A short description of your theme.
 
 ![screenshots01](https://github.com/evenhold/evenhold-syntax/blob/master/screenshots/Screenshot%20from%202018-01-22%2018-33-31.png)
 
+## Getting starter
 ```bash
   # clone into
   ~/.atom/packages
@@ -17,7 +18,7 @@ Open file init.coffee (edit >> init script...) and paste:
   # ...
   document.body.classList.add('an-evenhold-ui'));
 ```
-## Example init.coffee 
+## Example init.coffee
 
 ```coffee
 
