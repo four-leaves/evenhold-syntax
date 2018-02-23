@@ -11,21 +11,22 @@
     .project-root.project-root {
       &:first-child {
         padding-top: 10px;
+        background: rgb(29, 28, 28);
+        border-bottom: 4px solid rgb(26, 144, 170);
       }
       &:before {
-        height: 20px;
+        height: 30px;
         background-clip: padding-box;
         color:white;
       }
       & > .header .name {
-        line-height: 20px;
+        line-height: 30px;
         color:@blue-evn;// color de la carpeta proyecto en el panel izquierdo.
         text-shadow: 0px 0px 2px @blue-evn,0px 0px 2px @blue-evn,0px 0px 2px @blue-evn,0px 0px 2px @blue-evn;
       }
     }
-
     .selected:before {
-      // background: @green-evn;// file selected en el panel izquierdo
+      background: rgb(2, 59, 91);// file selected en el panel izquierdo
       border-left: 6px solid @dark-blue-evn;
     }
   }
@@ -39,7 +40,7 @@
 
 
   .theme-one-dark-ui .tree-view .project-root.project-root::before {
-    border-top: 10px solid transparent;
+    border-top: 0px solid transparent;
   }
 
   .tree-view-resizer {

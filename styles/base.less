@@ -2,10 +2,11 @@
 
 
 atom-text-editor, :host {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.45);
   background-image:url(atom://evenhold-syntax/images/background.png);
   background-size: cover;
   background-position: center center;
+  // background-repeat: no-repeat;
   border-left:2px solid @blue-evn;
   color: @white-evn;
   .wrap-guide {
@@ -26,18 +27,12 @@ atom-text-editor, :host {
   .gutter {
     background-color: @black-evn;
     color: @blue-evn;
-    // text-shadow: 0 0 3px @light-orange-evn, 0 0 3px @light-orange-evn, 0 0 3px @light-orange-evn, 0 0 3px @light-orange-evn;
     font-weigth:bold;
-
     .line-number {
       &.cursor-line {
-        // background-color: @gutter-select-line-alien;
         background-color: @dark-blue2-evn;
-        // color: @gutter-select-line-color-alien;
         color:@white-evn;
-
       }
-
       &.cursor-line-no-selection {
         color:@white-evn;
       }
@@ -48,7 +43,6 @@ atom-text-editor, :host {
   .gutter .line-number:after,
   .fold-marker:after {
     color: @gutter-select-line-number-alien;
-    // background-color:rgb(250,0,0);
   }
 
   .invisible {
@@ -77,10 +71,14 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 //esta linea es un comentario
 .comment {
-  color: @grey-evn;
-  // font-size:12px;
+  // color: @grey-evn;
+  color: rgb(115, 111, 113);
+  // font-size:22px;
+  // line-height: 22px;
+  text-shadow: 0 0 5px black;
+  // font-family: "Express";
+  // font-family: "Feronia";
 }
-
 
 .keyword {
   color: @red-evn;
@@ -112,11 +110,6 @@ atom-text-editor .search-results .marker.current-result .region,
   font-weight: bold;
   color: @green-evn;
   text-decoration: normal;
-  // text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #7ac822 , 0 0 70px #7ac822 , 0 0 80px #7ac822 , 0 0 100px #7ac822 ;
-  // -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  // -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  // -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  // transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 /* close bracket */
 .bracket-matcher {
@@ -162,7 +155,7 @@ atom-text-editor .search-results .marker.current-result .region,
     border: none;
     color: @yellow-evn;
     text-decoration: normal;
-    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #7ac822 , 0 0 70px #7ac822 , 0 0 80px #7ac822 , 0 0 100px #7ac822 ;
+    text-shadow: 0 0 1px rgba(255,255,255,1) ;
     -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -256,8 +249,7 @@ atom-text-editor .search-results .marker.current-result .region,
   box-sizing: border-box;
   text-decoration: none;
   color: @red-evn;
-  //sombra de los nombre de funciones.
-  // text-shadow: 0 0 5px @red-evn , 0 0 20px @red-evn , 0 0 30px @red-evn , 0 0 40px @red-evn , 0 0 70px @red-evn , 0 0 80px @red-evn , 0 0 100px @red-evn;
+  //shadow name functions.
   -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -265,12 +257,12 @@ atom-text-editor .search-results .marker.current-result .region,
 
 
   &.name.function {
-    color: @blue-evn; //nombre de las funciones.
-    text-shadow: 0 0 5px @blue-evn , 0 0 20px @blue-evn , 0 0 30px @blue-evn , 0 0 40px @blue-evn , 0 0 70px @red-evn , 0 0 80px @red-evn , 0 0 100px @red-evn;
+    color: @blue-evn; //name function.
+    text-shadow: 0 0 1px @blue-evn , 0 0 1px @blue-evn , 0 0 1px @blue-evn , 0 0 1px @blue-evn;
   }
   &.name.type {
     color: @red-evn;
-    text-shadow: 0 0 5px @red-evn , 0 0 20px @red-evn , 0 0 30px @red-evn , 0 0 40px @red-evn , 0 0 70px @red-evn , 0 0 80px @red-evn , 0 0 100px @red-evn;
+    // text-shadow: 0 0 5px @red-evn , 0 0 10px @red-evn , 0 0 10px @red-evn , 0 0 10px @red-evn , 0 0 10px @red-evn , 0 0 10px @red-evn , 0 0 10px @red-evn;
     // text-decoration: underline;
   }
 
@@ -291,7 +283,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.other.attribute-name {
-    color: @red-evn;//orange cambia color clases
+    color: @red-evn;
 
     &.id {
       color: @blue;
